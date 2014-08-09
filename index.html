@@ -7,21 +7,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="img/logo-bcomp7.png">
 		<!-- Bootstrap CSS - customized -->
-		<link href="css/bootstrap-custom.css" rel="stylesheet">
         <link rel="stylesheet" href="timecircles/inc/TimeCircles.css" />
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+		<script type="text/javascript" src="js/jquery.js"></script>
 	
 	</head>
 	
 	
 	<body>
 		<a id="top" style="display:none;"></a>
-		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="navbar navbar-default navbar-static-top" role="navigation" id="brand">
 		  <div class="container">
 			<div class="navbar-header">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,30 +36,68 @@
 			  </button>
 			  <a class="navbar-brand" href="#logo-small">
 				<!-- Logo pojok kiri atas -->
-				<img src="img/logo-bcomp7.png" style="height:80px;margin-top:-36px;display:inline-block;">
-				<div style="display:inline-block;vertical-align:top;margin:7px;line-height:1.1;">Brilliant<span style="font-size:26px;font-weight:bold;color:#ffa500;">
+				<img src="img/logo-bcomp7.png" style="height:80px;margin-top:-40px;display:inline-block;">
+				<div style="display:inline-block;vertical-align:middle;margin-top:-25px;line-height:1.1;">Brilliant<span style="font-size:26px;font-weight:bold;color:#ffa500;">
 				VII</span><br>Competition</div>
 			  </a>
 			</div>
 			<div class="navbar-collapse collapse">
 			  <ul class="nav nav-pills navbar-right">
-				<li class="active"><a href="#infobox-updates">Home</a></li>
+				<li class="active"><a href="#update-content">Home</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#infobox-aboutbcomp">Tentang Brilliant Competition</a></li>
-						<li><a href="#infobox-aboutbc">Profil Brilliant Class</a></li>
+						<li><a href="#bcomp-content">Tentang Brilliant Competition</a></li>
+						<li><a href="#bc-content">Profil Brilliant Class</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Info Lomba <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#infobox-schedule">Jadwal</a></li>
-						<li><a href="#infobox-sistemlomba">Sistem Lomba</a></li>
+						<li><a href="#schedule-content">Jadwal</a></li>
+						<li><a href="#sistemlomba-content">Sistem Lomba</a></li>
 					</ul>
 				</li>
-				<li><a href="#infobox-pendaftaran">Pendaftaran</a></li>
-				<li><a href="#infobox-kontak">Kontak</a></li>
+				<li><a href="#pendaftaran-content">Pendaftaran</a></li>
+				<li><a href="#contact-content">Kontak</a></li>
+			  </ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</div>
+
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="fixed-navbar">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Menu</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#logo-small">
+			  	Brilliant Competition <span style="font-size:26px;font-weight:bold;color:#ffa500;">
+				VII</span>
+			  </a>
+			</div>
+			<div class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="#update-content">Home</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#bcomp-content">Tentang Brilliant Competition</a></li>
+						<li><a href="#bc-content">Profil Brilliant Class</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Info Lomba <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#schedule-content">Jadwal</a></li>
+						<li><a href="#sistemlomba-content">Sistem Lomba</a></li>
+					</ul>
+				</li>
+				<li><a href="#pendaftaran-content">Pendaftaran</a></li>
+				<li><a href="#contact-content">Kontak</a></li>
 			  </ul>
 			</div><!--/.nav-collapse -->
 		  </div>
@@ -94,31 +136,39 @@
 			  </a> -->
 		</div>
 
-	
-		<div id="infobox-updates" class="infobox infobox-first">
-			<div class="container">
-				<h2><span class="update-date">Update: 30 Juli</span>Pendaftaran &amp; Penyisihan 1 sudah dibuka!</h2> <br>
+		<div id="update-content">
+			<div id="floating-date">
+				<span class="update">update</span><br><span class="date">30</span><br><span class="month">Juli</span>
+			</div>
+			<div class="container content-frame">
+				<br>
+				<h2>Pendaftaran &amp; Penyisihan 1 sudah dibuka!</h2> <br>
 					
-				    <p>
-						Brilliant Competition VII telah dimulai! Total hadiahnya puluhan juta rupiah lho... Ayo buruan <a href="#infobox-pendaftaran" class="section-link">daftar</a>!
-					</p>
-					
-					<p>
-						Pendaftaran dan pengumpulan jawaban Penyisihan I akan dibuka sampai <strong>19 September 2014.</strong> Waktu yang tersisa:
-					</p>
-						
-					
-					<div id="main-countdown" data-date="2014-09-19 23:59:59" style="margin:5% auto;width:80%;"></div>
+			    <p>
+					Brilliant Competition VII telah dimulai! Total hadiahnya puluhan juta rupiah lho... Ayo buruan daftar!
+				</p>
+				
+				<p>
+					Pendaftaran dan pengumpulan jawaban Penyisihan I akan dibuka sampai <strong>19 September 2014.</strong>
+				</p>
+
+				<div class="text-center">
+					<a href="#pendaftaran-content" class="btn btn-orange">DAFTAR</a>
+				</div>
+				<br>
+				<p>Sisa Waktu:</p>
+				<div id="main-countdown" data-date="2014-09-19 23:59:59" style="margin:0% auto;width:80%;"></div>
 			</div>
 		</div>
 		
 		
-		<div id="infobox-aboutbcomp" class="infobox">
-			<div class="container">
-				<h1>Tentang Brilliant Competition</h1> <br>
-				
-				<div class="long-info">
-					
+		<div id="bcomp-content">
+			<div class="container row content-frame">
+				<div class="col-md-12">
+					<br>
+					<h1>Tentang Brilliant Competition</h1>
+					<hr>
+					<img class="col-md-5" src="img/brilliantcompetition.png" style="float:right;">
 					<p>
 						Brilliant Competition adalah sebuah kompetisi Matematika dan Sains yang diperuntukkan bagi siswa-siswi SMP/sederajat di seluruh Indonesia. Kompetisi ini diselenggarakan oleh siswa-siswi Brilliant Class, sebuah program di SMAK PENABUR Gading Serpong, Tangerang. Mulai dari pertama diadakan pada tahun 2009 hingga Brilliant Competition VI pada September 2013, ajang bergengsi ini telah berhasil menjaring siswa-siswi SMP dari berbagai provinsi di Indonesia untuk turut berkompetisi.
 					</p>
@@ -138,260 +188,361 @@
 						<li>Mempererat hubungan antar sekolah antara SMAK PENABUR Gading Serpong dengan sekolah-sekolah lain di Indonesia</li>
 						<li>Memperkenalkan profil Brilliant Class SMAK PENABUR Gading Serpong di tingkat nasional</li>
 					</ul>
-					
+
+					<br>
 				</div>
 			</div>
 		</div>
-		
-		<div id="infobox-aboutbc" class="infobox">
-			<div class="container">
-				<h1>Profil Brilliant Class</h1> <br>
-				
-				<div class="long-info">
-					
-					<p>
+
+		<div id="bc-content">
+			<div class="container content-frame">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Profil Brilliant Class</h1>
+						<hr>
+					</div>
+					<div class="col-md-4">
+						<img src="img/gs.jpg" class="col-md-12">
+					</div>
+					<div class="col-md-8">
+						<p>
 						Brilliant Class adalah program khusus yang ada di SMAK PENABUR Gading Serpong. Diselenggarakan sejak tahun 2007, BC telah meluluskan 5 angkatan yang kini tersebar untuk melanjutkan studi di berbagai universitas baik di dalam maupun di luar negeri. BC merupakan program yang diprakarsai oleh yayasan BPK PENABUR untuk mengakomodir siswa/i dengan kemampuan intelektual yang superior untuk melanjutkan pendidikan ke universitas terbaik di dalam maupun luar negeri. 
 					</p>
 					<p>
 						Kurikulum yang didesain bagi program ini lebih difokuskan pada bidang Matematika dan Sains dengan tujuan agar siswa/i yang memiliki kemampuan intelektual yang tinggi disertai bakat dan minat di bidang sains dan matematika dapat terfasilitasi sesuai dengan kebutuhan mereka. Seperti kita ketahui bahwa Indonesia memiliki begitu banyak murid dengan potensi yang tidak terbatas. Melalui program BC diharapkan siswa/i mengembangkan potensi yang dimiliki dengan sebaik-baiknya untuk mengharumkan nama bangsa di kancah internasional. 
 					</p>
-					
-					<!--<div class="container">
-						<div class="row">
-							<div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="prestasi1.jpg" /></div>
-						</div>
-					</div>-->
-					
-					<br>
-					
-					<p>
+					</div>
+				</div>
+				<br>
+				<div class="row" style="margin-left:0px;">
+					<div class="col-md-12">
 						<a class="download-link" href="http://www.bpkpenabur.or.id/id/node/20">SMAK PENABUR Gading Serpong</a> <br>
 						<strong>
 							Jl. Kelapa Gading Barat Raya, Gading Serpong<br>
 							Kabupaten Tangerang, Banten <br>
 							(021) 54205137
 						</strong>
-					</p>
-					
+					</div>
 				</div>
+				<br>
+				<br>
 			</div>
 		</div>
-		
-		<div id="infobox-schedule" class="infobox">
-			<div class="container">
+
+		<div id="schedule-content">
+			<div class="container content-frame">
+				<br><br><br><br><br>
 				<h1>Jadwal Lomba</h1>
-				
-				
-				<a href="#infobox-pendaftaran" class="icon-container-large section-link">
-					<img src="img/docs-icon.png">
-					<strong>up to 19 September</strong><br>Pendaftaran<br>Penyisihan 1 (online)
-				</a>
-				<div class="icon-container-large">
-					<img src="img/contacts-icon.png">
-					<strong>9 Oktober 2014</strong><br>Technical Meeting
+				<br><br>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="col-md-3">
+							<h1><i class="fa fa-file-o fa-3x"></i></h1>
+							<div><h4>Up To 19 September</h4></div>
+							<div><span class="glyphicon glyphicon-minus"></span></div>
+							<div><h5>Pendaftaran Penyisihan 1 (Online)</h5></div>
+						</div>
+						<div class="col-md-3">
+							<h1><i class="fa fa-users fa-3x"></i></h1>
+							<div><h4>9 Oktober 2014</h4></div>
+							<div><span class="glyphicon glyphicon-minus"></span></div>
+							<div><h5>Technical Meeting</h5></div>
+						</div>
+						<div class="col-md-3">
+							<h1><i class="fa fa-pencil fa-3x"></i></h1>
+							<div><h4>10 Oktober 2014</h4></div>
+							<div><span class="glyphicon glyphicon-minus"></span></div>
+							<div><h5>Penyisihan 2<br>Semifinal</h5></div>
+						</div>
+						<div class="col-md-3">
+							<h1><i class="fa fa-trophy fa-3x"></i></h1>
+							<div><h4>11 Oktober 2014</h4></div>
+							<div><span class="glyphicon glyphicon-minus"></span></div>
+							<div><h5>Final</h5></div>
+						</div>
+					</div>
 				</div>
-				<div class="icon-container-large">
-					<img src="img/books-icon.png">
-					<strong>10 Oktober 2014</strong><br>Penyisihan 2<br>Semifinal
-				</div>
-				<div class="icon-container-large">
-					<img src="img/books-icon.png">
-					<strong>11 Oktober 2014</strong><br>Final
-				</div>
-				    
+				<br><br><br><br><br><br><br><br><br><br>
 			</div>
 		</div>
+
+		<div id="sistemlomba-content">
+			<div class="container content-frame">
+				<h1>Sistem Lomba</h1>
+				<hr>
+				<div class="row">
+					<div class="col-md-9">
+						<h2>Penyisihan 1</h2>
+						<p>Peserta mendownload soal, dikerjakan di daerah masing-masing lalu dikumpulkan melalui email ke bee.comp7@gmail.com atau via pos ke SMAK PENABUR Gading Serpong.</p>
+						<a href="#pendaftaran-content" class="btn btn-orange">Download Soal</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<h3>Matematika</h3>
+						<p>
+							Materi: Matematika kelas 7,8,9. <br>
+							Soal: 15 soal pilihan ganda (benar +2, salah/tidak dijawab 0), 10 soal isian (benar +3, salah/tidak dijawab 0), 4 soal essay (rentang nilai 0-10).
+						</p>
+					</div>
+					<div class="col-md-5">
+						<h3>Sains</h3>
+						<p>
+							Materi: Fisika dan Biologi kelas 7,8,9. <br>
+							Soal: Fisika (30 pilihan ganda, 3 essay), Biologi (30 pilihan ganda, 3 essay). <br>
+							Bobot tiap soal: pilihan ganda (benar +4, salah 0, tidak dijawab 1), essay (rentang nilai 0-10).
+						</p>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-9">
+						<p>Jawaban paling lambat diterima panitia tanggal 19 September 2014.</p>
+						<p>50 tim terbaik dari masing-masing bidang akan melanjutkan ke babak penyisihan 2 yang dilaksanakan di SMAK PENABUR Gading Serpong.</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-9">
+						<h2>Penyisihan 2</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<h3>Matematika</h3>
+						<p>
+							Soal: 16 soal isian <br>
+							Penilaian: Benar +1
+						</p>
+					</div>
+					<div class="col-md-5">
+						<h3>Sains</h3>
+						<p>
+							Biologi: 11 pilihan ganda (benar 2, salah 0), 3 isian singkat (benar 6, salah 0), multiple true/false (benar 1: nilai 0, benar 2:2, benar 3:6, benar 4:10) <br>
+							Fisika: 20 isian singkat (benar +5) <br>
+							(waktu: 60 menit) <br>
 		
-		<div id="infobox-sistemlomba" class="infobox">
-			<div class="container">
-				<h1>Sistem Lomba</h1> <br>
-				
-				<div class="long-info">
-					<h2>Penyisihan 1</h2>
-
-					<p>Peserta mendownload soal <a class="section-link" href="#infobox-pendaftaran">di sini</a>, dikerjakan di daerah masing-masing lalu dikumpulkan melalui email ke bee.comp7@gmail.com atau via pos ke SMAK PENABUR Gading Serpong.</p>
-
-					<h3>Matematika</h3>
-					<p>
-						Materi: Matematika kelas 7,8,9. <br>
-						Soal: 15 soal pilihan ganda (benar +2, salah/tidak dijawab 0), 10 soal isian (benar +3, salah/tidak dijawab 0), 4 soal essay (rentang nilai 0-10).
-					</p>
-
-					<h3>Sains</h3>
-					<p>
-						Materi: Fisika dan Biologi kelas 7,8,9. <br>
-						Soal: Fisika (30 pilihan ganda, 3 essay), Biologi (30 pilihan ganda, 3 essay). <br>
-						Bobot tiap soal: pilihan ganda (benar +4, salah 0, tidak dijawab 1), essay (rentang nilai 0-10).
-					</p>
-
-					<p>Jawaban paling lambat diterima panitia tanggal 19 September 2014.</p>
-					<p>50 tim terbaik dari masing-masing bidang akan melanjutkan ke babak penyisihan 2 yang dilaksanakan di SMAK PENABUR Gading Serpong.</p>
-
-					<h2>Penyisihan 2</h2>
-
-					<h3>Matematika</h3>
-					<p>
-						Soal: 16 soal isian <br>
-						Penilaian: Benar +1
-					</p>
-
-					<h3>Sains</h3>
-					<p>
-						Biologi: 11 pilihan ganda (benar 2, salah 0), 3 isian singkat (benar 6, salah 0), multiple true/false (benar 1: nilai 0, benar 2:2, benar 3:6, benar 4:10) <br>
-						Fisika: 20 isian singkat (benar +5) <br>
-						(waktu: 60 menit) <br>
-	
-					</p>
-
-					<p>16 tim terbaik dari masing-masing bidang akan masuk ke babak semifinal. Bila ada 2 tim memiliki nilai sama, tim dengan jumlah soal benar lebih banyak akan menempati peringkat lebih tinggi.</p>
-
-					<h2>Semifinal</h2>
-
-					<h3>Matematika</h3>
-					<p>
-						Soal: 6 soal essay <br>
-						Penilaian: Poin maksimum 7 tiap soal
-					</p>
-
-					<h3>Sains</h3>
-					<p>
-						Terdapat 16 pos soal untuk masing-masing fisika dan biologi.
-					</p>
-
-					<p>Empat tim terbaik masing-masing bidang akan maju ke babak final. Jika terdapat nilai yang sama, tim dengan jumlah jawaban benar terbanyak akan diutamakan.</p>
-
-					<h2>Final</h2>
-
-					<h3>Matematika</h3>
-					<p>
-						Bentuk lomba: Presentasi.
-					</p>
-
-					<h3>Sains</h3>
-					<p>
-						Fisika: 10 essay (nilai maks. 20) <br>
-						Biologi: 40 soal multiple true/false (benar 1: nilai 0, benar 2: nilai 1, benar 3: nilai 3, benar 4:nilai 5)
-					</p>
-					
-					<h2>Juara</h2>
-					<p><strong>Juara 1:</strong> Piala bergilir + Rp 4.250.000,- + sertifikat<br>
-					   <strong>Juara 2:</strong> Piala + Rp 3.250.000,- + sertifikat<br>
-					   <strong>Juara 3:</strong> Piala + Rp 2.250.000,- + sertifikat<br>
-					   <strong>Juara 4:</strong> Piala + Rp 1.250.000,- + sertifikat
-					</p>
-					
-					
-					
+						</p>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-9">
+						<p>16 tim terbaik dari masing-masing bidang akan masuk ke babak semifinal. Bila ada 2 tim memiliki nilai sama, tim dengan jumlah soal benar lebih banyak akan menempati peringkat lebih tinggi.</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-9">
+						<h2>Semifinal</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<h3>Matematika</h3>
+						<p>
+							Soal: 6 soal essay <br>
+							Penilaian: Poin maksimum 7 tiap soal
+						</p>
+					</div>
+					<div class="col-md-5">
+						<h3>Sains</h3>
+						<p>
+							Terdapat 16 pos soal untuk masing-masing fisika dan biologi.
+						</p>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-9">
+						<p>Empat tim terbaik masing-masing bidang akan maju ke babak final. Jika terdapat nilai yang sama, tim dengan jumlah jawaban benar terbanyak akan diutamakan.</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-9">
+						<h2>Final</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<h3>Matematika</h3>
+						<p>
+							Bentuk lomba: Presentasi.
+						</p>
+					</div>
+					<div class="col-md-5">
+						<h3>Sains</h3>
+						<p>
+							Fisika: 10 essay (nilai maks. 20) <br>
+							Biologi: 40 soal multiple true/false (benar 1: nilai 0, benar 2: nilai 1, benar 3: nilai 3, benar 4:nilai 5)
+						</p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-9">
+						<h2>Juara</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-7">
+						<h4>Juara 1</h4>
+						<p>Piala bergilir + Rp 4.250.000,- + sertifikat</p><br>
+						<h4>Juara 2</h4>
+						<p>Piala + Rp 3.250.000,- + sertifikat</p><br>
+						<h4>Juara 3</h4>
+						<p>Piala + Rp 2.250.000,- + sertifikat</p><br>
+						<h4>Juara 4</h4>
+						<p>Piala + Rp 1.250.000,- + sertifikat</p><br>
+					</div>
+					<div class="col-md-4 text-orange">
+						<br>
+						<h1><i class="fa fa-trophy fa-5x"></i></h1>
+					</div>
 				</div>
 			</div>
 		</div>
-		
-		<div id="infobox-pendaftaran" class="infobox">
-			<div class="container">
-				<h1>Pendaftaran</h1>
-				
-				
-				<table>
-					<tr>
-						<td class="table-number">1</td>
-						<td>
-							Uang pendaftaran sebesar <strong>Rp150.000,- per tim</strong> ditransfer ke: <strong>BCA KCP Financial Center nomor 8015044442 a/n Dra. Dewi Widiananda atau Nugraha Budi Santoso. </strong> Simpan bukti transfer sebagai lampiran. 
-						</td>
-					</tr>
-					<tr>
-						<td class="table-number">2</td>
-						<td>
-							Download dan isi formulir pendaftaran.
-							<ul>
-								<li>Matematika: <a class="download-link" href="FormulirPendaftaranBComp7-Matematika.pdf">Download</a> </li>
-								<li>Sains: <a class="download-link" href="FormulirPendaftaranBComp7-Sains.pdf">Download</a> </li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<td class="table-number">3</td>
-						<td>
-							Download soal dan jawab di lembar jawaban yang sudah disediakan.
-							<ul>
-								<li>Matematika: <a class="download-link" href="Soal-P1-BComp7-Matematika.pdf">Soal</a> | <a class="download-link" href="LJ-P1-BComp7-Matematika.pdf">Lembar jawaban</a> </li>
-								<li>Sains: <a class="download-link" href="Soal-P1-BComp7-Sains.pdf">Soal</a> | <a class="download-link" href="LJ-P1-BComp7-Sains.pdf">Lembar jawaban</a> </li>
-							</ul>
-								
-						</td>
-					</tr>
-					<tr>
-						<td class="table-number">4</td>
-						<td>
-							Kirim formulir pendaftaran, lembar jawaban dan bukti transfer ke: <br><br style="font-size:6px;">
-													
+
+		<div id="pendaftaran-content">
+			<div class="container content-frame">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Pendaftaran</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<div class="number">
+							1
+						</div>
+					</div>
+					<div class="col-md-10">
+						<br><br>
+						<p>Uang pendaftaran sebesar <strong>Rp150.000,- per tim</strong> ditransfer ke: <strong>BCA KCP Financial Center nomor 8015044442 a/n Dra. Dewi Widiananda atau Nugraha Budi Santoso. </strong> Simpan bukti transfer sebagai lampiran.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<div class="number">
+							2
+						</div>
+					</div>
+					<div class="col-md-10">
+						<br>
+						<p>Download dan isi formulir pendaftaran.</p>
+						<div class="row">
+							<div class="col-md-3">
+								<a target="_blank" class="btn btn-red btn-pendaftaran" href="FormulirPendaftaranBComp7-Matematika.pdf"><i class="fa fa-download"></i> Matematika</a>
+							</div>
+							<div class="col-md-3">
+								<a target="_blank" class="btn btn-red btn-pendaftaran" href="FormulirPendaftaranBComp7-Sains.pdf"><i class="fa fa-download"></i> Sains</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<div class="number">
+							3
+						</div>
+					</div>
+					<div class="col-md-10">
+						<br><br>
+						<p>Download soal dan jawab di lembar jawaban yang sudah disediakan.</p>
+						<div class="row">
+							<div class="col-md-4">
+								<h4>Matematika</h4>
+								<a target="_blank" class="btn btn-red btn-download" href="Soal-P1-BComp7-Matematika.pdf"><i class="fa fa-pencil"></i> Soal</a><br><br>
+								<a target="_blank" class="btn btn-red btn-download" href="LJ-P1-BComp7-Matematika.pdf"><i class="fa fa-file-text-o"></i> Lembar Jawaban</a>
+							</div>
+							<div class="col-md-4">
+								<h4>Sains</h4>
+								<a target="_blank" class="btn btn-red btn-download" href="Soal-P1-BComp7-Sains.pdf"><i class="fa fa-pencil"></i> Soal</a><br><br>
+								<a target="_blank" class="btn btn-red btn-download" href="LJ-P1-BComp7-Sains.pdf"><i class="fa fa-file-text-o"></i> Lembar Jawaban</a>
+							</div>
+						</div>
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-md-2 text-right">
+						<div class="number">
+							4
+						</div>
+					</div>
+					<div class="col-md-10">
+						<br>
+						<p>Kirim formulir pendaftaran, lembar jawaban dan bukti transfer ke:</p>	
 							Panitia Brilliant Competition VII<br>
 							SMAK PENABUR Gading Serpong<br>
 							Jl. Kelapa Gading Barat Raya, Gading Serpong<br>
 							Tangerang 15810<br><br style="font-size:6px;">
 							
-							atau melalui fax ke <strong>021 - 5420 5137</strong> ditujukan kepada <strong>Dra. Dewi Widiananda</strong> <br><br style="font-size:6px;">
+							<p>atau melalui fax ke <strong>021 - 5420 5137</strong> ditujukan kepada <strong>Dra. Dewi Widiananda</strong> <br><br style="font-size:6px;"></p>
 							
-							atau scan dan lampirkan melalui email ke <strong>bee.comp7@gmail.com</strong> dengan format subject:<br>
-							<strong>LJ - [bidang] - [nama sekolah] - [nama peserta 1] &amp; [nama peserta 2]</strong>
-							
-						</td>
-					</tr>
-				</table>
-				    
+							<p>atau scan dan lampirkan melalui email ke <strong>bee.comp7@gmail.com</strong> dengan format subject:<br></p>
+							<p><strong>LJ - [bidang] - [nama sekolah] - [nama peserta 1] &amp; [nama peserta 2]</strong></p>
+					</div>
+				</div>
+				<br><br><br>
+			</div>
+		</div>
+
+		<div id="contact-content">
+			<div class="container content-frame">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Kontak</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<h4><i class="fa fa-map-marker"></i> SMAK PENABUR Gading Serpong</h4>
+						<p>Jl. Kelapa Gading Barat Raya, Gading Serpong</p>
+						<p>Kabupaten Tangerang, Banten, 15810</p>
+						<p>(+62 21) 5420 5137</p>
+					</div>
+					<div class="col-md-8">
+						<div id="map_canvas" class="col-md-12">
+
+						</div>
+					</div>
+				</div>
+				<br><br>
+				<div class="clear"></div>
+				<div class="row text-large">
+					<div class="col-md-3">
+						<h4>Nomor Handphone</h4>
+						<p><i class="fa fa-mobile fa-2x" style="vertical-align: middle;"></i> +62 888 8360 875</p>
+						<p><i class="fa fa-mobile fa-2x" style="vertical-align: middle;"></i> +62 888 8360 876</p>
+					</div>
+					<div class="col-md-3">
+						<h4>e-mail</h4>
+						<p><i class="fa fa-envelope-o fa-lg" style="vertical-align: middle;"></i> bee.comp7@gmail.com</p>
+					</div>
+					<div class="col-md-3">
+						<h4>Website</h4>
+						<p><a href="http://www.facebook.com/BrilliantCompetition.BC" target="_blank"><i class="fa fa-facebook fa-lg fa-fw" style="vertical-align: middle;"></i> Brilliant Competition</a></p>
+						<p><a href="https://twitter.com/bcompbc" target="_blank"><i class="fa fa-twitter fa-lg fa-fw" style="vertical-align: middle;"></i> @BCompBC</a></p>
+					</div>
+				</div>
+				<br><br><br>
 			</div>
 		</div>
 		
-		<div id="infobox-kontak" class="infobox">
+		<div id="footer" class="footer">
 			<div class="container">
-				<h1>Kontak Panitia</h1>
-				
-				
-				<div class="icon-container-large">
-					<img src="img/phone-icon.png">
-					0888 8360 875
-				</div>
-				<div class="icon-container-large">
-					<img src="img/phone-icon.png">
-					0888 8360 876
-				</div>
-				<!-- <div class="icon-container-large">
-					<img src="img/phone-icon.png">
-					Lydia Dorothy<br>0821 1234 3405
-				</div>
-				<div class="icon-container-large">
-					<img src="img/phone-icon.png">
-					Venny Mettasari<br>0896 0130 9721
-				</div>
-				<div class="icon-container-large">
-					<img src="img/phone-icon.png">
-					Dhira Kumari<br>0858 8211 5269
-				</div> -->
-				<div class="icon-container-large">
-					<img src="img/at-icon.png">
-					bee.comp7@gmail.com
-				</div>
-				<a href="https://twitter.com/bcompbc" class="icon-container-large">
-					<img src="img/twitter-icon.png">
-					@BCompBC
-				</a>
-				<a href="http://www.facebook.com/BrilliantCompetition.BC" class="icon-container-large">
-					<img src="img/fb-icon.png">
-					Brilliant Competition
-				</a>
-				    
-			</div>
-		</div>
-		
-		<div id="infobox-credits" class="infobox">
-			<div class="container">
-				(c) 2014. Designed by NathanChrs.
+				<span style="float:right;">&#169; 2014. Designed by NathanChrs & vincentsthe.</span>
 			</div>
 		</div>	
 	
-		
-		<script src="jquery/jquery-1.11.1.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="timecircles/inc/TimeCircles.js"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+		<script type="text/javascript" src="js/scroll.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function () {
 				$("#main-countdown").TimeCircles(); 
@@ -401,15 +552,6 @@
 				});
 			});
 			$('body').scrollspy({offset:250});
-			$('.navbar li a, a.section-link').click(function(event) {
-				event.preventDefault();
-				if($(this).attr('href')=='#infobox-updates'){
-					window.scrollTo(0,0);
-				} else {
-					$($(this).attr('href'))[0].scrollIntoView();
-					scrollBy(0, -77);
-				}
-			});
 			
 		</script>
 	</body>

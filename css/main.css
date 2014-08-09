@@ -1,0 +1,212 @@
+body {
+	font-family: 'Open Sans', 'sans-serif',
+}
+
+.content-frame {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.btn.btn-orange {
+	background-color: #ff4200;
+	color: white;
+	font-size: 1.2em;
+	border-radius: 0px;
+	padding: 10px 40px;
+}
+
+.btn.btn-red {
+	background-color: #ffffff;
+	color: #ff7f0e;
+	font-size: 1.2em;
+	border-radius: 0px;
+	padding: 10px 40px;
+}
+
+.text-orange {
+	color: #ffa500;
+}
+
+.text-large {
+	font-size: 1.3em;
+}
+
+.valign-middle {
+	vertical-align: middle;
+}
+
+.dropdown-menu {
+	border-radius: 0;
+}
+
+#brand {
+	padding: 20px;
+	margin-bottom: 0;
+}
+
+#brand a {
+	color: #666;
+}
+
+#fixed-navbar {
+	display: none;
+	opacity: 0;
+}
+
+#fixed-navbar a {
+	color: #666;
+}
+
+#fixed-navbar .active a {
+	color: #FFF;
+}
+
+#fixed-navbar .active .dropdown-menu a {
+	color: #666;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	background-color: #ff7f0e;
+	border-radius: 0px;
+	color: white;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color: #ff7f0e;
+	border-radius: 0px;
+	color: white;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+	background-color: #CCC;
+}
+
+#brand .active a {
+	color: white;
+}
+
+#floating-date {
+	position: absolute;
+	left: 100px;
+	background-color: #ffa500;
+	text-align: middle;
+	padding: 10px;
+	color: white;
+	line-height:26px;
+}
+
+#floating-date .update {
+	font-size: 1.2em;
+	line-height:20px;
+}
+
+#floating-date .date {
+	font-size: 3em;
+	line-height:35px;
+}
+
+#floating-date .month {
+	font-size: 2em;
+	line-height:20px;
+}
+
+#update-content {
+	background-color: #FFFFFF;
+	text-align: center;
+	position:relative;
+}
+
+#update-content p {
+	font-size: 1.3em;
+	color: #666;
+}
+
+#bcomp-content {
+	background: url("../img/background.jpg") no-repeat center;
+	text-align: justify;
+	color: white;
+	text-shadow: 1px 1px 6px #000000;
+}
+
+#bc-content {
+	background-color: #FFFFFF;
+	text-align: justify;
+}
+
+#schedule-content {
+	background-image: url("../img/bg1.png");
+	color: white;
+	text-align: center;
+}
+
+#sistemlomba-content {
+	background-color: #FFFFFF;
+}
+
+#sistemlomba-content p {
+	color: #666;
+}
+
+#sistemlomba-content .btn-orange {
+	font-size: 1em;
+	background-color: #ff4200;
+}
+
+#sistemlomba-content h2, #sistemlomba-content h3 {
+	color: #444;
+}
+
+#sistemlomba-content h4 {
+	line-height:10px;
+}
+
+#pendaftaran-content {
+	background-color: #ff7f0e;
+	color: white;
+}
+
+#pendaftaran-content .number {
+	font-size: 7em;
+}
+
+#pendaftaran-content p {
+	font-size: 1.3em;
+}
+
+#pendaftaran-content .btn-pendaftaran {
+	width: 200px;
+}
+
+#pendaftaran-content .btn-download {
+	width: 250px;
+	text-align: left;
+}
+
+#contact-content {
+	background-color: #FFFFFF;
+	color: #666666;
+}
+
+#contact-content h1, #contact-content h2, #contact-content h3, #contact-content h4, #contact-content h5 {
+	color: #222222;
+}
+
+#map_canvas {
+	height: 270px;
+	background-color: #CCC;
+}
+
+#contact-content a {
+ 	color: #666666;
+}
+
+#footer {
+	background-color: #F4F4F4;
+	border-top: 2px solid #ccc;
+	padding: 35px;
+	color: #999;
+}
+
+#footer a {
+	color: #999;
+}

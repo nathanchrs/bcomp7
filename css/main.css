@@ -85,7 +85,11 @@ body {
 	color: white;
 }
 
-#floating-date {
+.relative {
+	position: relative;
+}
+
+.floating-date {
 	position: absolute;
 	left: 100px;
 	background-color: #ffa500;
@@ -95,19 +99,24 @@ body {
 	line-height:26px;
 }
 
-#floating-date .update {
+.floating-date .update {
 	font-size: 1.2em;
 	line-height:20px;
 }
 
-#floating-date .date {
+.floating-date .date {
 	font-size: 3em;
 	line-height:35px;
 }
 
-#floating-date .month {
+.floating-date .month {
 	font-size: 2em;
 	line-height:20px;
+}
+
+.help-text {
+	font-size: 0.8em;
+	color: #EEE;
 }
 
 #update-content {
@@ -119,6 +128,10 @@ body {
 #update-content p {
 	font-size: 1.3em;
 	color: #666;
+}
+
+#update-content hr {
+	margin-bottom: 0;
 }
 
 #bcomp-content {

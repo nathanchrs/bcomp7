@@ -8,7 +8,7 @@
 		<link rel="shortcut icon" href="img/logo-bcomp7.png">
 		<!-- Bootstrap CSS - customized -->
         <link rel="stylesheet" href="timecircles/inc/TimeCircles.css" />
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -65,7 +65,7 @@
 		  </div>
 		</div>
 
-		<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="fixed-navbar">
+		<div class="navbar navbar-default navbar-fixed-top hidden-xs" role="navigation" id="fixed-navbar">
 		  <div class="container">
 			<div class="navbar-header">
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -103,7 +103,7 @@
 		  </div>
 		</div>
 		
-		<div id="main-carousel" class="carousel slide" data-ride="carousel">
+		<div id="main-carousel" class="carousel slide hidden-xs" data-ride="carousel">
 			  <!-- Indicators -->
 			  <ol class="carousel-indicators">
 				<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
@@ -137,53 +137,69 @@
 		</div>
 
 		<div id="update-content">
-			<div class="relative">
-				<div class="floating-date">
-					<span class="update">update</span><br><span class="date">09</span><br><span class="month">Aug</span>
-				</div>
-				<div class="container content-frame">
-					<h2 >Ralat Soal Penyisihan 1 Sains</h2> <br>
-					<p>
-						Mohon maaf karena telah terjadi sedikit kesalahan pada soal Penyisihan 1 Sains. <br>Harap mendownload ulang soal <a href="#pendaftaran-content">disini</a>.
-					</p>
-				</div>
-			</div>
-			<br><br><br>
-			<hr>
-			<div class="relative">
-				<div class="floating-date">
-					<span class="update">update</span><br><span class="date">30</span><br><span class="month">Juli</span>
-				</div>
-				<div class="container content-frame">
-					<br>
-					<h2>Pendaftaran &amp; Penyisihan 1 sudah dibuka!</h2> <br>
-						
-				    <p>
-						Brilliant Competition VII telah dimulai! Total hadiahnya puluhan juta rupiah lho... Ayo buruan daftar!
-					</p>
-					
-					<p>
-						Pendaftaran dan pengumpulan jawaban Penyisihan I akan dibuka sampai <strong>19 September 2014.</strong>
-					</p>
-
-					<div class="text-center">
-						<a href="#pendaftaran-content" class="btn btn-orange">DAFTAR</a>
+			<div class="container">
+				<div class="relative">
+					<div class="floating-date">
+						<span class="update">update</span><span class="date">17</span><span class="month">Sep</span>
 					</div>
-					<br>
-					<p>Sisa Waktu:</p>
-					<div id="main-countdown" data-date="2014-09-19 23:59:59" style="margin:0% auto;width:80%;"></div>
+					<div class="container content-frame">
+						<h2>Batas Pengumpulan Jawaban Penyisihan 1 Diundur!</h2> <br>
+						<p>
+							Panitia memberi waktu tambahan bagi para peserta untuk ikut berpartisipasi dalam Brilliant Competition 7.<br>
+							Batas pengumpulan jawaban penyisihan 1 diundur menjadi tanggal 2 Oktober 2014 pukul 17.00 WIB.
+						</p>
+					</div>
+				</div>
+				<br><br><br>
+				<hr>
+				<div class="relative">
+					<div class="floating-date">
+						<span class="update">update</span><span class="date">09</span><span class="month">Aug</span>
+					</div>
+					<div class="container content-frame">
+						<h2 >Ralat Soal Penyisihan 1 Sains</h2> <br>
+						<p>
+							Mohon maaf karena telah terjadi sedikit kesalahan pada soal Penyisihan 1 Sains. <br>Harap mendownload ulang soal <a href="#pendaftaran-content">disini</a>.
+						</p>
+					</div>
+				</div>
+				<br><br><br>
+				<hr>
+				<div class="relative">
+					<div class="floating-date">
+						<span class="update">update</span><span class="date">30</span><span class="month">Juli</span>
+					</div>
+					<div class="container content-frame">
+						<br>
+						<h2>Pendaftaran &amp; Penyisihan 1 sudah dibuka!</h2> <br>
+							
+					    <p>
+							Brilliant Competition VII telah dimulai! Total hadiahnya puluhan juta rupiah lho... Ayo buruan daftar!
+						</p>
+						
+						<p>
+							Pendaftaran dan pengumpulan jawaban Penyisihan I akan dibuka sampai <strong>2 Oktober 2014 pukul 17.00.</strong>
+						</p>
+
+						<div class="text-center">
+							<a href="#pendaftaran-content" class="btn btn-orange">DAFTAR</a>
+						</div>
+						<br>
+						<p>Sisa Waktu:</p>
+						<div id="main-countdown" data-date="2014-10-2 17:0:0" style="margin:0% auto;width:80%;"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 		
 		
 		<div id="bcomp-content">
-			<div class="container row content-frame">
+			<div class="container">
 				<div class="col-md-12">
 					<br>
 					<h1>Tentang Brilliant Competition</h1>
 					<hr>
-					<img class="col-md-5" src="img/brilliantcompetition.png" style="float:right;">
+					<img class="col-md-5 hidden-sm" src="img/brilliantcompetition.png" style="float:right;">
 					<p>
 						Brilliant Competition adalah sebuah kompetisi Matematika dan Sains yang diperuntukkan bagi siswa-siswi SMP/sederajat di seluruh Indonesia. Kompetisi ini diselenggarakan oleh siswa-siswi Brilliant Class, sebuah program di SMAK PENABUR Gading Serpong, Tangerang. Mulai dari pertama diadakan pada tahun 2009 hingga Brilliant Competition VI pada September 2013, ajang bergengsi ini telah berhasil menjaring siswa-siswi SMP dari berbagai provinsi di Indonesia untuk turut berkompetisi.
 					</p>
@@ -210,13 +226,13 @@
 		</div>
 
 		<div id="bc-content">
-			<div class="container content-frame">
+			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<h1>Profil Brilliant Class</h1>
 						<hr>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 hidden-sm">
 						<img src="img/gs.jpg" class="col-md-12">
 					</div>
 					<div class="col-md-8">
@@ -245,7 +261,7 @@
 		</div>
 
 		<div id="schedule-content">
-			<div class="container content-frame">
+			<div class="container">
 				<br><br><br><br><br>
 				<h1>Jadwal Lomba</h1>
 				<br><br>
@@ -253,7 +269,7 @@
 					<div class="col-md-8 col-md-offset-2">
 						<div class="col-md-3">
 							<h1><i class="fa fa-file-o fa-3x"></i></h1>
-							<div><h4>Up To 19 September</h4></div>
+							<div><h4>Up To 2 Oktober</h4></div>
 							<div><span class="glyphicon glyphicon-minus"></span></div>
 							<div><h5>Pendaftaran Penyisihan 1 (Online)</h5></div>
 						</div>
@@ -282,7 +298,7 @@
 		</div>
 
 		<div id="sistemlomba-content">
-			<div class="container content-frame">
+			<div class="container">
 				<h1>Sistem Lomba</h1>
 				<hr>
 				<div class="row">
@@ -293,14 +309,14 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<h3>Matematika</h3>
 						<p>
 							Materi: Matematika kelas 7,8,9. <br>
 							Soal: 15 soal pilihan ganda (benar +2, salah/tidak dijawab 0), 10 soal isian (benar +3, salah/tidak dijawab 0), 4 soal essay (rentang nilai 0-10).
 						</p>
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<h3>Sains</h3>
 						<p>
 							Materi: Fisika dan Biologi kelas 7,8,9. <br>
@@ -312,25 +328,25 @@
 				<br>
 				<div class="row">
 					<div class="col-md-9">
-						<p>Jawaban paling lambat diterima panitia tanggal 19 September 2014.</p>
+						<p>Jawaban paling lambat diterima panitia tanggal 2 Oktober 2014 pukul 17.00.</p>
 						<p>50 tim terbaik dari masing-masing bidang akan melanjutkan ke babak penyisihan 2 yang dilaksanakan di SMAK PENABUR Gading Serpong.</p>
 					</div>
 				</div>
 				<hr>
 				<div class="row">
-					<div class="col-md-9">
+					<div class="col-md-6">
 						<h2>Penyisihan 2</h2>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<h3>Matematika</h3>
 						<p>
 							Soal: 16 soal isian <br>
 							Penilaian: Benar +1
 						</p>
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<h3>Sains</h3>
 						<p>
 							Biologi: 11 pilihan ganda (benar 2, salah 0), 3 isian singkat (benar 6, salah 0), multiple true/false (benar 1: nilai 0, benar 2:2, benar 3:6, benar 4:10) <br>
@@ -353,14 +369,14 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<h3>Matematika</h3>
 						<p>
 							Soal: 6 soal essay <br>
 							Penilaian: Poin maksimum 7 tiap soal
 						</p>
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<h3>Sains</h3>
 						<p>
 							Terdapat 16 pos soal untuk masing-masing fisika dan biologi.
@@ -380,13 +396,13 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<h3>Matematika</h3>
 						<p>
 							Bentuk lomba: Presentasi.
 						</p>
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<h3>Sains</h3>
 						<p>
 							Fisika: 10 essay (nilai maks. 20) <br>
@@ -420,7 +436,7 @@
 		</div>
 
 		<div id="pendaftaran-content">
-			<div class="container content-frame">
+			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<h1>Pendaftaran</h1>
@@ -428,21 +444,17 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-2 text-right">
-						<div class="number">
-							1
-						</div>
+					<div class="col-md-2 number">
+						1
 					</div>
 					<div class="col-md-10">
-						<br><br>
+						<br>
 						<p>Uang pendaftaran sebesar <strong>Rp150.000,- per tim</strong> ditransfer ke: <strong>BCA KCP Financial Center nomor 8015044442 a/n Dra. Dewi Widiananda atau Nugraha Budi Santoso. </strong> Simpan bukti transfer sebagai lampiran.</p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-2 text-right">
-						<div class="number">
-							2
-						</div>
+					<div class="col-md-2 number">
+						2
 					</div>
 					<div class="col-md-10">
 						<br>
@@ -455,16 +467,15 @@
 								<a target="_blank" class="btn btn-red btn-pendaftaran" href="FormulirPendaftaranBComp7-Sains.pdf"><i class="fa fa-download"></i> Sains</a>
 							</div>
 						</div>
+						<br><br>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-2 text-right">
-						<div class="number">
-							3
-						</div>
+					<div class="col-md-2 number">
+						3
 					</div>
 					<div class="col-md-10">
-						<br><br>
+						<br>
 						<p>Download soal dan jawab di lembar jawaban yang sudah disediakan.</p>
 						<div class="row">
 							<div class="col-md-4">
@@ -482,10 +493,8 @@
 					</div>
 				</div><br>
 				<div class="row">
-					<div class="col-md-2 text-right">
-						<div class="number">
-							4
-						</div>
+					<div class="col-md-2 number">
+						4
 					</div>
 					<div class="col-md-10">
 						<br>
@@ -506,7 +515,7 @@
 		</div>
 
 		<div id="contact-content">
-			<div class="container content-frame">
+			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<h1>Kontak</h1>
@@ -514,35 +523,54 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<h4><i class="fa fa-map-marker"></i> SMAK PENABUR Gading Serpong</h4>
 						<p>Jl. Kelapa Gading Barat Raya, Gading Serpong</p>
 						<p>Kabupaten Tangerang, Banten, 15810</p>
 						<p>(+62 21) 5420 5137</p>
+						<div class="row">
+							<div class="col-md-5">
+								<h4>Nomor Handphone</h4>
+								<div style="width:10%;float:left;">
+									<i class="fa fa-mobile fa-2x" style="vertical-align: middle;"></i>
+								</div>
+								<div style="width:90%;float:left;">
+									<h5>Welly</h5>
+									<p>+62 888 8360 875</p>
+								</div>
+								<div class="clearfix"></div>
+								<div style="width:10%;float:left;">
+									<i class="fa fa-mobile fa-2x" style="vertical-align: middle;"></i>
+								</div>
+								<div style="width:90%;float:left;">
+									<h5>Tesalonika</h5>
+									<p>+62 888 8360 876</p>
+									<p>+62 821 1112 8938</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="col-md-7">
+								<h4>e-mail</h4>
+								<p><i class="fa fa-envelope-o fa-lg" style="vertical-align: middle;"></i> bee.comp7@gmail.com</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-5">
+								<h4>Twitter</h4>
+								<p><a href="https://twitter.com/bcompbc" target="_blank"><i class="fa fa-twitter fa-lg fa-fw" style="vertical-align: middle;"></i> @BCompBC</a></p>
+							</div>
+							<div class="col-md-7">
+								<h4>Facebook</h4>
+								<p><a href="http://www.facebook.com/BrilliantCompetition.BC" target="_blank"><i class="fa fa-facebook fa-lg fa-fw" style="vertical-align: middle;"></i> Brilliant Competition</a></p>
+							</div>
+						</div>
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-6">
 						<div id="map_canvas" class="col-md-12">
 
 						</div>
 					</div>
 				</div>
-				<br><br>
-				<div class="clear"></div>
-				<div class="row text-large">
-					<div class="col-md-3">
-						<h4>Nomor Handphone</h4>
-						<p><i class="fa fa-mobile fa-2x" style="vertical-align: middle;"></i> +62 888 8360 875</p>
-						<p><i class="fa fa-mobile fa-2x" style="vertical-align: middle;"></i> +62 888 8360 876</p>
-					</div>
-					<div class="col-md-3">
-						<h4>e-mail</h4>
-						<p><i class="fa fa-envelope-o fa-lg" style="vertical-align: middle;"></i> bee.comp7@gmail.com</p>
-					</div>
-					<div class="col-md-3">
-						<h4>Website</h4>
-						<p><a href="http://www.facebook.com/BrilliantCompetition.BC" target="_blank"><i class="fa fa-facebook fa-lg fa-fw" style="vertical-align: middle;"></i> Brilliant Competition</a></p>
-						<p><a href="https://twitter.com/bcompbc" target="_blank"><i class="fa fa-twitter fa-lg fa-fw" style="vertical-align: middle;"></i> @BCompBC</a></p>
-					</div>
 				</div>
 				<br><br><br>
 			</div>

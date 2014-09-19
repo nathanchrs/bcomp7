@@ -2,10 +2,6 @@ body {
 	font-family: 'Open Sans', 'sans-serif',
 }
 
-.content-frame {
-	width: 1080px;
-	margin: 0 auto;
-}
 
 .btn.btn-orange {
 	background-color: #ff4200;
@@ -21,6 +17,7 @@ body {
 	font-size: 1.2em;
 	border-radius: 0px;
 	padding: 10px 40px;
+	margin-top: 5px;
 }
 
 .text-orange {
@@ -89,34 +86,89 @@ body {
 	position: relative;
 }
 
-.floating-date {
-	position: absolute;
-	left: 100px;
-	background-color: #ffa500;
-	text-align: middle;
-	padding: 10px;
-	color: white;
-	line-height:26px;
+@media only screen and (min-width: 768px) {
+	.floating-date {
+		position: absolute;
+		left: -30px;
+		background-color: #ffa500;
+		text-align: middle;
+		padding: 7px 8px;
+		color: white;
+		line-height:26px;
+	}
+
+	.floating-date span {
+		display: block;
+	}
+
+	.floating-date .update {
+		font-size: 1.2em;
+	}
+
+	.floating-date .date {
+		font-size: 3em;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.floating-date .month {
+		font-size: 2em;
+	}
 }
 
-.floating-date .update {
-	font-size: 1.2em;
-	line-height:20px;
+@media only screen and (min-width: 1000px) {
+
+	.floating-date {
+		position: absolute;
+		left: 40px;
+		background-color: #ffa500;
+		text-align: middle;
+		padding: 7px 8px;
+		color: white;
+		line-height:26px;
+	}
+
+	.floating-date span {
+		display: block;
+	}
+
+	.floating-date .update {
+		font-size: 1.2em;
+	}
+
+	.floating-date .date {
+		font-size: 3em;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.floating-date .month {
+		font-size: 2em;
+	}
 }
 
-.floating-date .date {
-	font-size: 3em;
-	line-height:35px;
-}
+@media only screen and (max-width: 768px) {
 
-.floating-date .month {
-	font-size: 2em;
-	line-height:20px;
+	.floating-date {
+		background-color: #ffa500;
+		text-align: middle;
+		padding: 10px;
+		color: white;
+		line-height:26px;
+	}
+
+	.floating-date span {
+		display: inline;
+	}
 }
 
 .help-text {
 	font-size: 0.8em;
 	color: #EEE;
+}
+
+.gray {
+	background-color: #DDD;
 }
 
 #update-content {
@@ -142,7 +194,7 @@ body {
 }
 
 #bc-content {
-	background-color: #FFFFFF;
+	background: url("../img/bg2.png");
 	text-align: justify;
 }
 
@@ -153,7 +205,7 @@ body {
 }
 
 #sistemlomba-content {
-	background-color: #FFFFFF;
+	background-image: url("../img/bg-pattern.png");
 }
 
 #sistemlomba-content p {
@@ -178,8 +230,18 @@ body {
 	color: white;
 }
 
-#pendaftaran-content .number {
-	font-size: 7em;
+@media only screen and (min-width: 768px) {
+	#pendaftaran-content .number {
+		font-size: 7em;
+		text-align: right;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#pendaftaran-content .number {
+		font-size: 4em;
+		text-align: left;
+	}
 }
 
 #pendaftaran-content p {
@@ -213,6 +275,11 @@ body {
  	color: #666666;
 }
 
+#contact-content p {
+	font-size: 1.1em;
+	margin-bottom: 3px;
+}
+
 #footer {
 	background-color: #F4F4F4;
 	border-top: 2px solid #ccc;
@@ -222,4 +289,10 @@ body {
 
 #footer a {
 	color: #999;
+}
+
+h5 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0;
 }

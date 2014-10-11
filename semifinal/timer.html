@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Brilliant Competition 7</title>
+		
+		<script src="inc/jquery.js"></script>
+		<link rel="stylesheet" href="inc/bootstrap.min.css"/>
+		<script type="text/javascript" src="inc/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="inc/TimeCircles.css" />
+		<script type="text/javascript" src="inc/TimeCircles.js"></script>
+	</head>
+	
+	<style>
+			
+		body {
+			font-family:"Titillium Web";
+			background-color:#efefef;
+			background-image:url("inc/hex.png");
+			background-size:500px auto;
+		}
+			
+		.container {
+			margin:75px auto;
+			width:75%;
+			text-align:center;
+		}
+	
+		h1 {
+		
+		}
+		
+		#CountDownTimer {
+			width:100%;
+		}
+		
+		.controls {
+			text-align:center;
+			margin:10px auto;
+		}
+		
+		#time {
+			margin:0px;
+			font-size:14px;
+			width:80px;
+			border:1px solid gray;
+			text-align:center;
+		}
+		
+	</style>
+	
+	
+	<body>
+	
+		<div class="container">		
+            <div id="CountDownTimer" data-timer="900"></div>		
+		</div>
+		
+		<div class="controls">
+			<input type="text" id="time" value="600">  &nbsp; detik &nbsp;&nbsp;&nbsp;
+			<button class="btn btn-success startTimer">Restart</button>
+            <button class="btn btn-danger stopTimer">Pause</button>
+		</div>
+	
+	
+		<script>
+           
+           var tc = $("#CountDownTimer").TimeCircles({ start:false, time: { Days: { show: false }, Hours: { show:false }}, count_past_zero:false});
+		   var currentstarttime = 0;
+			
+            $(".startTimer").click(function() {
+				var time = $("#time").val();
+				$("#CountDownTimer").data("timer",time);
+				currentstarttime = time;
+				
+                $("#CountDownTimer").TimeCircles().restart();
+            });
+			var pauseresume = true;
+            $(".stopTimer").click(function() {
+				if(pauseresume){
+					$(".stopTimer").html("Resume");
+					$("#CountDownTimer").TimeCircles().stop();
+					pauseresume = false;
+				} else {
+					$(".stopTimer").html("Pause");
+					$("#CountDownTimer").TimeCircles().start();
+					pauseresume = true;
+				}
+            });
+		
+			var lowa = new Audio("inc/440hz150.mp3");
+			var higha = new Audio("inc/880hz150.mp3");
+			var bell = new Audio("inc/bell.mp3");
+			var alarm = new Audio("inc/alarm.mp3");
+		
+			tc.addListener(function(unit,value,total){
+				if(total == Math.round(currentstarttime/2)){
+					bell.play();
+				}
+				if((total <= 10) && (total>5)){
+					lowa.play();
+				}
+				if((total <= 5) && (total>0)){
+					higha.play();
+				}
+				if(total==0){
+					alarm.play();
+				}
+			});
+
+        </script>       
+	
+	
+	</body>
+</html>
